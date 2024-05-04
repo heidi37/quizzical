@@ -1,0 +1,34 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+  text-align: left;
+  border-bottom: 0.79px solid #DBDEF0;
+  margin-top: .5rem;
+}
+
+.question p {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.169rem;
+  margin: 0;
+}
+
+.question ul {
+  list-style:none;
+  margin: .5rem 0 1rem;
+  padding: 0;
+
+}
+
+.question li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  font-size: 0.64rem;
+  font-weight: 500;
+  color: #293264;
+  border: 0.77px solid #4D5B9E;
+  border-radius: 7.71px;
+  padding: 3px 6px;
+  background: white;
+}
