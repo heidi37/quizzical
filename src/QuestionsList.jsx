@@ -48,9 +48,11 @@ export default function Questions({questions, setQuestions, score, setScore, get
       )
     })}
 
-    {answersSubmitted === true && <p>You scored {score}/5 correct answers</p>}
     {answersSubmitted === false && <button className="check-answers" onClick={checkAnswers}>Check Answers</button>}
-    {answersSubmitted === true && <button className="check-answers" onClick={restartGame}>Play Again</button>}
+    <div>
+    {answersSubmitted === true && <p className="score">You scored {score}/5 correct answers</p>}
+    {answersSubmitted === true && <button className="play-again" onClick={restartGame}>Play Again</button>}
+    </div>
     </>
   )
 }

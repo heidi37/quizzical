@@ -1,8 +1,30 @@
-.check-answers {
+.check-answers, .play-again {
   width: auto;
   height: auto;
   font-size: 0.64rem;
-  padding: 11px 21px 10px;
+  font-weight: 600;
+  padding: 7px 25px 7px;
   border-radius: 8px;
   margin-top: 1rem;
+}
+
+.score {
+  display: inline;
+  margin-right: 1.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 500px) {
+  .score {
+    display: block;
+    margin-right: 0;
+    margin-top: 1.5rem;
+  }
+
+  .play-again {
+    margin-top: 0;
+    display: block;
+    text-align: center;
+  }
 }

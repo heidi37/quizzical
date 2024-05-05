@@ -18,17 +18,10 @@ function App() {
     }))
   }
 
-  // useEffect(() => {
-  //   getQuestions()
-  // }
-  // ,[])
-
   return (
     <>
-
-    <div className="container">
       <div className="top-blob"></div>
-      <div className="bottom-blob"></div>
+      <div className="container">
       {questions.length === 0 ?
       <>
       <h1>Quizzical</h1>
@@ -36,11 +29,15 @@ function App() {
       <button onClick={getQuestions}>Start quiz</button>
       </>
       :
+      <>
+      <h1>Quizzical</h1>
       <QuestionsList questions={questions} setQuestions={setQuestions} score={score} setScore={setScore} getQuestions={getQuestions}
         answersSubmitted={answersSubmitted} setAnswersSubmitted={setAnswersSubmitted}
       />
+      </>
       }
       </div>
+      <div className="bottom-blob"></div>
     </>
   )
 }

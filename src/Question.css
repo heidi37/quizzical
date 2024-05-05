@@ -1,17 +1,17 @@
 .question {
+  border-bottom: 0.79px solid #DBDEF0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: flex-start;
-  width: 75%;
-  text-align: left;
-  border-bottom: 0.79px solid #DBDEF0;
-  margin-top: .5rem;
 }
 
 .question p {
   font-family: 'Karla', sans-serif;
   line-height: 1.169rem;
-  margin: 0;
+  margin: 0 0 .15rem 0;
+  font-weight: 700;
 }
 
 .question ul {
@@ -31,6 +31,12 @@
   border-radius: 7.71px;
   padding: 3px 6px;
   background: white;
+}
+
+@media screen and (max-width: 500px) {
+  .question li {
+    margin-top: 6px;
+  }
 }
 
 .question li.selected-answer {

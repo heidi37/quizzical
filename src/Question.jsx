@@ -3,7 +3,6 @@ import './Question.css'
 
 export default function Question({question, allAnswers, id, selectedAnswerIndex, selectedAnswer, correct_answer, isCorrect, isChecked}) {
 
-
   return (
     <div className="question">
       <p>{he.decode(question)}</p>
