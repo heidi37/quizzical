@@ -6,6 +6,7 @@ import QuestionsList from './QuestionsList'
 function App() {
   const [questions, setQuestions] = useState([])
   const [score, setScore] = useState(0)
+  const [answersSubmitted, setAnswersSubmitted] = useState(false)
 
   async function getQuestions(){
     const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple')
@@ -35,7 +36,9 @@ function App() {
       <button onClick={getQuestions}>Start quiz</button>
       </>
       :
-      <QuestionsList questions={questions} setQuestions={setQuestions} score={score} setScore={setScore}/>
+      <QuestionsList questions={questions} setQuestions={setQuestions} score={score} setScore={setScore} getQuestions={getQuestions}
+        answersSubmitted={answersSubmitted} setAnswersSubmitted={setAnswersSubmitted}
+      />
       }
       </div>
     </>
