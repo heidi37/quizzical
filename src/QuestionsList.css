@@ -23,8 +23,7 @@
   }
 
   .play-again {
-    margin-top: 0;
     display: block;
-    text-align: center;
+    margin: 0 auto;
   }
 }
