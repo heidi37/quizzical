@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import { nanoid } from 'nanoid'
 import './App.css'
 import QuestionsList from './QuestionsList'
 
@@ -9,7 +9,11 @@ function App() {
   async function getQuestions(){
     const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple')
     const data = await response.json()
-    setQuestions(data.results)
+    setQuestions(data.results.map(item =>  {
+      const answerArray = item.incorrect_answers.slice()
+      answerArray.splice(Math.floor(Math.random() * 4), 0, item.correct_answer)
+      return {...item, allAnswers: answerArray, id: nanoid()}
+    }))
   }
 
   // useEffect(() => {
@@ -30,7 +34,7 @@ function App() {
       <button onClick={getQuestions}>Start quiz</button>
       </>
       :
-      <QuestionsList questions={questions}/>
+      <QuestionsList questions={questions} setQuestions={setQuestions}/>
       }
       </div>
     </>
