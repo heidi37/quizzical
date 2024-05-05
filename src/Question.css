@@ -32,3 +32,8 @@
   padding: 3px 6px;
   background: white;
 }
+
+.question li.selected-answer {
+  background: #D6DBF5;
+  border-color: #D6DBF5;
+}

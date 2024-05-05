@@ -5,6 +5,7 @@ import QuestionsList from './QuestionsList'
 
 function App() {
   const [questions, setQuestions] = useState([])
+  const [score, setScore] = useState(0)
 
   async function getQuestions(){
     const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple')
@@ -12,7 +13,7 @@ function App() {
     setQuestions(data.results.map(item =>  {
       const answerArray = item.incorrect_answers.slice()
       answerArray.splice(Math.floor(Math.random() * 4), 0, item.correct_answer)
-      return {...item, allAnswers: answerArray, id: nanoid()}
+      return {...item, allAnswers: answerArray, id: nanoid(), selectedAnswerIndex: null}
     }))
   }
 
@@ -34,7 +35,7 @@ function App() {
       <button onClick={getQuestions}>Start quiz</button>
       </>
       :
-      <QuestionsList questions={questions} setQuestions={setQuestions}/>
+      <QuestionsList questions={questions} setQuestions={setQuestions} score={score} setScore={setScore}/>
       }
       </div>
     </>
