@@ -23,9 +23,9 @@
 
 .question li {
   display: inline-block;
-  margin: 0 10px 0 0;
-  font-size: 0.64rem;
-  font-weight: 500;
+  margin: 0 10px 3px 0;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: #293264;
   border: 0.77px solid #4D5B9E;
   border-radius: 7.71px;

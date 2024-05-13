@@ -9,7 +9,7 @@ function App() {
   const [answersSubmitted, setAnswersSubmitted] = useState(false)
 
   async function getQuestions(){
-    const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple')
+    const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple&category=9')
     const data = await response.json()
     setQuestions(data.results.map(item =>  {
       const answerArray = item.incorrect_answers.slice()

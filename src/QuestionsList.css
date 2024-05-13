@@ -1,8 +1,7 @@
 .check-answers, .play-again {
   width: auto;
   height: auto;
-  font-size: 0.64rem;
-  font-weight: 600;
+  font-size: 0.9rem;
   padding: 7px 25px 7px;
   border-radius: 8px;
   margin-top: 1rem;
