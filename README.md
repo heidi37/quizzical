@@ -1,6 +1,6 @@
 # Quizzical
 
-A single page app that generates 5 General Knowledge trivia questions.
+A single page React app that generates 5 General Knowledge trivia questions.
 
 This project is part of the Scrimba Frontend Developer Career path. I was given a Figma comp and I wrote all the code and used Vite to do the local development.
 
