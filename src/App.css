@@ -10,6 +10,17 @@
 }
 
 
+@media screen and (max-width: 500px) {
+  .container {
+    justify-content: space-between;
+    height: auto;
+  }
+  footer {
+    margin-top: 1rem;
+  }
+}
+
+
 .top-blob{
   content: url(/src/assets/yellow-blob.svg);
   display: inline-block;
